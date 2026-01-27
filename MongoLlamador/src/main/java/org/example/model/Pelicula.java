@@ -1,5 +1,7 @@
 package org.example.model;
 
+import java.util.List;
+
 public class Pelicula {
 
     private Long id;
