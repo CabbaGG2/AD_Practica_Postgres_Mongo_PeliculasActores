@@ -50,4 +50,8 @@ public class PeliculaService {
     public List<Pelicula> obtenerTodasPeliculas() {
         return peliRepo.findAll();
     }
+
+    public void deleteAll() {
+        peliRepo.deleteAll();
+    }
 }

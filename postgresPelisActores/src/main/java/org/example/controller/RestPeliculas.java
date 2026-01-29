@@ -34,6 +34,16 @@ public class RestPeliculas {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("titulo/{titulo}")
+    public ResponseEntity<List<Pelicula>> getByTitulo(@PathVariable String titulo){
+        List<Pelicula> p = peliculaService.obtenerPeliculaTitulo(titulo);
+        if (p == null || p.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+        else return ResponseEntity.ok(p);
+
+    }
+
     @PostMapping
     public ResponseEntity<Pelicula> create(@RequestBody Pelicula pelicula) {
         Pelicula guardada = peliculaService.save(pelicula);
@@ -74,5 +84,10 @@ public class RestPeliculas {
         return ResponseEntity.noContent().build();
     }
 
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAll() {
+        peliculaService.deleteAll();
+        return ResponseEntity.noContent().build();
+    }
 
 }

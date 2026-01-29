@@ -93,4 +93,9 @@ public class RestActores {
         return ResponseEntity.noContent().build();
     }
 
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAll() {
+        actorService.deleteAll();
+        return ResponseEntity.noContent().build();
+    }
 }

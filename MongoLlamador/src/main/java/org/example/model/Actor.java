@@ -9,9 +9,9 @@ public class Actor {
     @Id
     private String id;
 
-    private String nombre;
-    private String apellido;
-    private String nacionalidad;
+    private String nome;
+    private String apelidos;
+    private String nacionalidade;
 
     private Pelicula pelicula;
 
@@ -26,28 +26,28 @@ public class Actor {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getNacionalidad() {
-        return nacionalidad;
+    public String getNacionalidade() {
+        return nacionalidade;
     }
 
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApelidos() {
+        return apelidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApelidos(String apelidos) {
+        this.apelidos = apelidos;
     }
 
     public Pelicula getPelicula() {

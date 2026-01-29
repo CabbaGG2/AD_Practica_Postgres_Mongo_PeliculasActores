@@ -78,7 +78,7 @@ public class PeliculaService {
         Gson gson = new Gson();
         List<Pelicula> peliculas = obtenerTodasLasPeliculas();
         try{
-            FileWriter writer = new FileWriter("src/main/java/org/example/json/peliculas_exportadas.json");
+            FileWriter writer = new FileWriter("MongoLlamador/src/main/java/org/example/json/peliculas_exportadas.json");
             gson.toJson(peliculas, writer);
             writer.flush();
             writer.close();

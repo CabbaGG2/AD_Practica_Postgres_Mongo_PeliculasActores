@@ -40,4 +40,8 @@ public class ActorService {
         actorRepo.deleteById(id);
     }
 
+    public void deleteAll() {
+        actorRepo.deleteAll();
+    }
+
 }
